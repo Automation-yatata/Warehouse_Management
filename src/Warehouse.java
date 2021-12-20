@@ -9,12 +9,11 @@ class Warehouse{
 
 	private int NumberRacks = 0;
 	private int NumberUsers = 0;
-	private Location Loc;
 	private LinkedList <Rack> rackList = new LinkedList<Rack>();
 
 
-	public Warehouse(Location loc){
-		this.Loc = loc;
+	public Warehouse(){
+		
 	}
 
 	public int getNumberRacks(){
@@ -25,21 +24,7 @@ class Warehouse{
 		
 		return this.NumberUsers;
 	}
-	public Location getLocation(){
-		
-		return this.Loc;
-	}
-
-
-
-	public int setLocation(User u, Location newLocation){
-		//verificar se user é Admin
-		/*
-			return -1 caso não seja
-		*/
-		this.Loc = newLocation;
-		return 0;
-	}
+	
 	public void increaseUsers(){
 		
 		this.NumberUsers += 1;
