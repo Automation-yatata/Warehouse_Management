@@ -15,9 +15,14 @@ public class Main{
 
         LinkedList<String> aux = d.queryUserSearch(userName);
 
+        if (aux.isEmpty() == true){
+            System.out.print("ERROR: User Login\n");
+            return null;
+        }
+
         if (password.equals(aux.get(7))){
             User u = new User(aux.get(1), Integer.parseInt(aux.get(2)), aux.get(3).charAt(0), aux.get(4), aux.get(5), aux.get(6));
-            System.out.print("User Login\n");
+            System.out.print("OKAY: User Login\n");
             return u;
         }else{
             System.out.print("ERROR: User Login\n");
